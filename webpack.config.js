@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
+    assetModuleFilename: "assets/images/[hash]"
   },
   resolve: {
     extensions: ['.js']
