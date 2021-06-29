@@ -5,6 +5,7 @@ const MiniCssExtractPlugin  =  require('mini-css-extract-plugin');
 const CssMinimizerPlugin  = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -69,6 +70,7 @@ module.exports = {
       filename: 'assets/[name].[contenthash].css'
     }),
     new Dotenv(),
+    new CleanWebpackPlugin()
     /*new CopyPlugin({
       patterns: [
         {
